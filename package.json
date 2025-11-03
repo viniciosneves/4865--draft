@@ -15,7 +15,8 @@
     "test:e2e:open": "cypress open",
     "test:e2e:ci": "start-server-and-test dev http://localhost:5173 test:e2e",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "audit": "npm audit --audit-level=moderate"
   },
   "dependencies": {
     "react": "^19.1.0",
