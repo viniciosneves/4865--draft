@@ -22,7 +22,7 @@ export default defineConfig({
       // - 'html': Gera relatório HTML navegável em coverage/index.html (útil para análise visual detalhada)
       // - 'lcov': Gera arquivo coverage/lcov.info (padrão para serviços como Codecov, Coveralls)
       // - 'text-summary': Resumo breve no terminal
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'json', 'html', 'lcov'],
       exclude: [
         'node_modules/', // Exclui dependências instaladas (não faz sentido medir cobertura de código de terceiros)
         'src/tests/', // Exclui arquivos de teste e utilitários de teste (não devem ser testados)
