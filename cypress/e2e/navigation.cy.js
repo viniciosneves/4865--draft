@@ -66,11 +66,6 @@ describe('Navegação do Feed para Post', () => {
 
     // Verificar que o feed está presente novamente
     cy.contains('Introdução ao React', { timeout: 10000 }).should('exist');
-
-    // FALHA PROPOSITAL: Verificar um texto que não existe
-    cy.contains('Este texto não existe na página', { timeout: 1000 }).should(
-      'exist'
-    );
   });
 
   it('deve navegar para diferentes posts e voltar', () => {
