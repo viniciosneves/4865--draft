@@ -1,5 +1,13 @@
 # React + Vite
 
+![GitHub Actions - Lint and Format](https://github.com/viniciosneves/4865--draft/actions/workflows/lint-and-format.yml/badge.svg)
+![GitHub Actions - Unit Tests](https://github.com/viniciosneves/4865--draft/actions/workflows/unit-tests.yml/badge.svg)
+![Coverage](https://img.shields.io/badge/coverage-93%25-green?logo=vitest)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=viniciosneves_4865--draft&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=viniciosneves_4865--draft)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=viniciosneves_4865--draft&metric=bugs)](https://sonarcloud.io/summary/new_code?id=viniciosneves_4865--draft)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=viniciosneves_4865--draft&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=viniciosneves_4865--draft)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=viniciosneves_4865--draft&metric=coverage)](https://sonarcloud.io/summary/new_code?id=viniciosneves_4865--draft)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
