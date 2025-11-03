@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import { MemoryRouter } from 'react-router'
-import { vi } from 'vitest'
+import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
+import { vi } from 'vitest';
 
 /**
  * Renderiza um componente envolvido com MemoryRouter para testes
@@ -10,18 +10,16 @@ import { vi } from 'vitest'
  * @returns {Object} Objeto retornado por render() do RTL
  */
 export const renderWithRouter = (ui, options = {}) => {
-  const { initialEntries = ['/'], ...renderOptions } = options
-  
+  const { initialEntries = ['/'], ...renderOptions } = options;
+
   const Wrapper = ({ children }) => {
     return (
-      <MemoryRouter initialEntries={initialEntries}>
-        {children}
-      </MemoryRouter>
-    )
-  }
+      <MemoryRouter initialEntries={initialEntries}>{children}</MemoryRouter>
+    );
+  };
 
-  return render(ui, { wrapper: Wrapper, ...renderOptions })
-}
+  return render(ui, { wrapper: Wrapper, ...renderOptions });
+};
 
 /**
  * Cria um mock do hook useAuth
@@ -39,7 +37,7 @@ export const createUseAuthMock = (authState = {}) => {
     login = vi.fn(() => ({ success: true, user })),
     register = vi.fn(() => ({ success: true, user })),
     logout = vi.fn(),
-  } = authState
+  } = authState;
 
   return () => ({
     isLoading,
@@ -48,6 +46,5 @@ export const createUseAuthMock = (authState = {}) => {
     login,
     register,
     logout,
-  })
-}
-
+  });
+};

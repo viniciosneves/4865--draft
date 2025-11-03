@@ -1,0 +1,32 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build outputs
+dist
+build
+
+# Test outputs
+coverage
+.nyc_output
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cypress
+cypress/screenshots
+cypress/downloads
+cypress/videos
+

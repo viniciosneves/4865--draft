@@ -1,28 +1,25 @@
-import { useEffect } from "react"
-import { useAuth } from "../../hooks/useAuth"
-import { Spinner } from "../Spinner"
-import { useNavigate } from "react-router";
+import { useEffect } from 'react';
+import { useAuth } from '../../hooks/useAuth';
+import { Spinner } from '../Spinner';
+import { useNavigate } from 'react-router';
 
-export const ProtectedRoute = ({children}) => {
+export const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated, isLoading } = useAuth();
+  const navigate = useNavigate();
 
-    const { isAuthenticated, isLoading } = useAuth()
-    const navigate = useNavigate();
-
-    useEffect(() => {
-
-        if (!isLoading && !isAuthenticated) {
-            navigate('/auth/login')
-        }
-
-    }, [isAuthenticated, isLoading, navigate])
-
-    if (isLoading) {
-        return <Spinner />
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate('/auth/login');
     }
+  }, [isAuthenticated, isLoading, navigate]);
 
-    if (!isAuthenticated) {
-        return null
-    }
+  if (isLoading) {
+    return <Spinner />;
+  }
 
-    return children
-}
+  if (!isAuthenticated) {
+    return null;
+  }
+
+  return children;
+};

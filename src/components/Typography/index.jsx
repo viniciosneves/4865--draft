@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './typography.module.css';
 
-const Typography = ({ 
-  variant = 'body', 
-  children, 
-  className = '', 
+const Typography = ({
+  variant = 'body',
+  children,
+  className = '',
   color,
-  ...props 
+  ...props
 }) => {
   const getTag = () => {
     switch (variant) {
